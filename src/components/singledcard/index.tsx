@@ -1,3 +1,4 @@
+// the aim of this component is to display the card images
 import "./singleCard.css";
 import { SingleCardProps } from "../../types";
 

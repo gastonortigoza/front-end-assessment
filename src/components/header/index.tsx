@@ -1,3 +1,4 @@
+//the aim of this component is to display the header
 import './header.css';
 import {messages} from '../../messages';
 

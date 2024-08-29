@@ -1,4 +1,4 @@
-// src/context/index.tsx
+//this is the context file that will be used to store the card images and the card state
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 import { cardImages as initialCardImages } from '../utils';
 import { Card } from '../types';
@@ -19,6 +19,7 @@ export const CardProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+//this is a custom hook that will be used in the CardGrid component
 export const useCardContext = () => {
   const context = useContext(CardContext);
   if (!context) {

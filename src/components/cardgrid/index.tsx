@@ -1,3 +1,4 @@
+// the aim of this component is to display the card grid
 import React, { useState, useEffect } from 'react';
 import SingleCard from '../singledcard';
 import './cardgrid.css';
@@ -14,6 +15,7 @@ const CardGrid: React.FC<CardGridProps> = () => {
   const [turns, setTurns] = useState(0);
   const [disabled, setDisabled] = useState(false);
 
+  //this function will shuffle the cards and reset the game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
@@ -24,6 +26,7 @@ const CardGrid: React.FC<CardGridProps> = () => {
     setTurns(0);
   };
 
+  //handle the choice of the user
   const handleChoice = (card: Card) => {
     if (choiceOne) {
       setChoiceTwo(card);
@@ -32,6 +35,7 @@ const CardGrid: React.FC<CardGridProps> = () => {
     }
   };
 
+  //reset the turn
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
