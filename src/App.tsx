@@ -1,10 +1,16 @@
-import './App.css'
-import Header from './components/header'
+import "./App.css";
+import { cardImages } from "./utils";
+import CardGrid from "./components/cardgrid";
+import Header from "./components/header";
 
-const App = () => (
-    <>
-      <Header />
-    </>
-)
 
-export default App
+const App = () => {
+  return (
+    <div className="App">
+    <Header />
+    <CardGrid cardImages={cardImages} />
+    </div>
+  );
+};
+
+export default App;

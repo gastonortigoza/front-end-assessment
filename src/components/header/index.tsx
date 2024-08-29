@@ -1,10 +1,11 @@
 import './header.css';
+import {messages} from '../../messages';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>MyApp</h1>
+        <h1>{messages.headerTitle}</h1>
       </div>
     </header>
   );
