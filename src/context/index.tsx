@@ -5,16 +5,15 @@ import { Card } from '../types';
 
 interface CardContextProps {
   cardImages: Card[];
-  setCardImages: React.Dispatch<React.SetStateAction<Card[]>>;
 }
 
 const CardContext = createContext<CardContextProps | undefined>(undefined);
 
 export const CardProvider = ({ children }: { children: ReactNode }) => {
-  const [cardImages, setCardImages] = useState(initialCardImages.map((card, index) => ({ ...card, id: index })));
+  const cardImages = useState(initialCardImages.map((card, index) => ({ ...card, id: index })))[0];
 
   return (
-    <CardContext.Provider value={{ cardImages, setCardImages }}>
+    <CardContext.Provider value={{ cardImages}}>
       {children}
     </CardContext.Provider>
   );

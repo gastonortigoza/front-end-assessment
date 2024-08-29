@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
     <Header />
-    <CardGrid cardImages={cardImages} />
+    <CardGrid />
     </div>
   );
 };

@@ -3,10 +3,11 @@ import SingleCard from '../singledcard';
 import './cardgrid.css';
 import { Card, CardGridProps } from '../../types';
 import {messages} from '../../messages';
+import { useCardContext } from '../../context';
 
 
-const CardGrid: React.FC<CardGridProps> = ({ cardImages }) => {
-
+const CardGrid: React.FC<CardGridProps> = () => {
+  const { cardImages } = useCardContext();
   const [cards, setCards] = useState<Card[]>([]);
   const [choiceOne, setChoiceOne] = useState<Card | null>(null);
   const [choiceTwo, setChoiceTwo] = useState<Card | null>(null);
